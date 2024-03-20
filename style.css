@@ -1,0 +1,150 @@
+body{
+     
+    background-image: url("imagenes/encriptacion.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    
+    }
+.titulo{
+   width: 100%;
+   text-align: center;
+   line-height: 50px;
+   position: center;
+   font-size: 40px;
+   color: yellow;
+   font-weight: bold;
+   font-style: normal; 
+   background: black; 
+   height: 50px;
+   
+}
+
+
+
+header{
+    width: auto;
+    position: relative;
+    padding: 0px;
+    
+}
+.pasos-encriptador{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    color: yellow;
+    padding: 40px;
+    font-size: 17px;
+}
+   
+.pasos{
+    line-height: 1.5;
+}
+
+.pasos:first-child{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.encriptador-cuadro{
+    
+    padding: 20px;
+    line-height: 20%;
+    width: 80%;
+    height: 50px;
+    border-radius: 20px;
+    }
+
+.encriptador-cuadro{
+    background-image: url("imagenes/matrix.gif");
+    opacity: 0.9;
+    color: white;
+    font-size: xx-large;
+}
+
+::placeholder{
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+}
+
+.texto-encriptdor{
+    display: flex;
+    align-items: center;
+    color: orange;  
+    background: white;
+    font-size: medium;
+}
+
+.imagen-aviso,.texto-encriptdor{
+    display: inline-block;
+}
+
+
+
+.botones-encriptador{
+    padding: 30px;
+}
+
+.botones-encriptador {
+    text-align: center; 
+}
+
+.boton-encriptar, .boton-desencriptar {
+    display: inline-block; 
+    margin: 10px; 
+    border-radius: 20px;
+    cursor: pointer;
+    width: 300px;
+    height: 60px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    font-size: x-large; 
+   
+
+}
+.boton-encriptar{
+    background: rgba(255, 30, 0, 0.699);
+    opacity: 1.0;
+   
+}
+
+.boton-desencriptar{
+    background: rgba(212, 113, 21, 0.842);
+    
+}
+
+.cuadro-desencriptador{
+    background-image: url(imagenes/codigo\ binario.gif);
+    opacity: 0.7;
+    color: white;
+    font-size: xx-large;
+    padding: 20px;
+    line-height: 20%;
+    width: 80%;
+    height: 50px;
+    border-radius: 20px;
+    
+}
+
+.desencritador{
+    padding: 40 0 0 40;
+}
+::placeholder{
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    opacity: 100;
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    margin: 1cm 0 0 ;
+}
+.Copyrigth{
+    font-size: small;
+    color: blue;
+    text-align: center;
+    
+}

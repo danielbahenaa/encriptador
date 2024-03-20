@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style-encriptador.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">  
+</head>
+
+<body>
+    <header> 
+        <div class="caja">
+            <h1 class="titulo">Bienvenidos al encriptador</h1> 
+                                   
+            <ul class="pasos-encriptador">
+                <li class="pasos">Pasos para utilizar el encriptador</li>
+                <li class="pasos">1.- En el primer cuadro de texto, escribe el mensaje que quieres encriptar</li>
+                <li class="pasos">2.- Presiona el botón de "encriptar".</li>
+                <li class="pasos">3.- Copia tu mensaje encriptado aparecera en el segundo cuadro de texto</li>
+                <li class="pasos">4.- Pega tu mensaje encriptado en el primer cuadro de texto y presiona el boton "Desencriptar"</li>
+            </ul>                       
+        </div>
+    </header>
+    <main>
+        <section class="encriptador">
+            <textarea id="textoAEncriptar" class="encriptador-cuadro" placeholder="Mensaje a encriptar"></textarea>
+            <div class="botones-encriptador">
+                <button onclick="encriptarTexto()" class="boton-encriptar">Encriptar</button>
+                <button onclick="desencriptarTexto()" class="boton-desencriptar">Desencriptar</button>
+            </div>
+        </section>    
+        <section class="desencriptador">
+            <textarea id="textoDesencriptado" class="cuadro-desencriptador" placeholder="Mensaje desencriptado"></textarea>
+        </section>
+    </main>
+    <script>
+        function encriptarTexto() {
+            var texto = document.getElementById("textoAEncriptar").value;
+            var textoEncriptado = "";
+        
+            for (var i = 0; i < texto.length; i++) {
+                var charCode = texto.charCodeAt(i);
+                if (charCode >= 97 && charCode <= 122) { 
+                    charCode = ((charCode - 97 + 13) % 26) + 97; /*cifrado César*/
+                }
+                textoEncriptado += String.fromCharCode(charCode);
+            }
+        
+            document.getElementById("textoDesencriptado").value = textoEncriptado;
+        }
+        
+        function desencriptarTexto() {
+            var texto = document.getElementById("textoAEncriptar").value;
+            var textoDesencriptado = "";
+        
+            for (var i = 0; i < texto.length; i++) {
+                var charCode = texto.charCodeAt(i);
+                if (charCode >= 97 && charCode <= 122) { 
+                    charCode = ((charCode - 97 - 13 + 26) % 26) + 97; // Aplicando descifrado César
+                }
+                textoDesencriptado += String.fromCharCode(charCode);
+            }
+        
+            document.getElementById("textoDesencriptado").value = textoDesencriptado;
+        }
+    </script>
+    
+    <footer>
+        <img src=>
+        <p class="Copyrigth"> Encriptador texto DBA. </p>         
+        
+    </footer>
+</body>
+
+</html>
